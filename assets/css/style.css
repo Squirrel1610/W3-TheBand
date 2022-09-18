@@ -1,0 +1,604 @@
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Common*/
+
+.text-center{
+    text-align: center !important;
+}
+
+.clear{
+    clear: both;
+}
+
+.text-white{
+    color: #fff !important;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding: 0 8px;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.col-third{
+    width: calc(100% / 3);
+}
+
+.col-half{
+    width: 50%;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #ddd;
+    color: #000;
+}
+
+.float-right{
+    float: right;
+}
+
+.text-blue{
+    color: #2196F3;
+}
+
+/*Common*/
+
+
+/* 1. Vị trí
+2. Kích thước 
+3. Màu sắc
+4. Kiểu dáng( Kiểu chữ, hình tròn, vuông,..) */
+
+#main{
+
+}
+
+#header{
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-bottom: 1px solid #ccc;
+}
+
+#nav .subnav a{
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav > li > a{
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a{
+    line-height: 46px;
+    padding: 0 24px;
+    text-decoration: none;
+    display: block;
+}
+
+/* #nav .subnav li{
+    width: 100%;
+    display: block;
+} */
+
+#nav > li:hover > a,
+#nav .subnav li:hover a
+{
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+    cursor: pointer;
+}
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+
+#header .search-btn:hover{
+    background-color: #f44336;
+}
+
+#header .menu-icon,
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#slider{
+    margin-top: 46px;
+    padding-top: 50%; /* width = 2 * height */
+    background-image: url("../img/Slider/slider1.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#slider .text-content{
+    position: absolute;
+    color: #fff;
+    bottom: 48px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    text-align: center;
+    width: 100%;
+    /* left: 0;
+    right: 0; */
+}
+
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+#slider .text-description{
+    font-size: 15px;
+}
+
+
+#content{
+
+}
+
+#content .content-section{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+#content .section-subheading
+{
+    font-size: 15px;
+    opacity: 0.6;
+    font-style: italic;
+    margin: 15px 0;
+    text-align: center;
+}
+
+#content .about-text{
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+#content .members-list{
+    padding: 32px 0 ;
+    /* overflow: hidden; */
+}
+
+#content .member-name{
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+#content .member-img{
+    width: 154px;
+    text-align: center;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.tour-section{
+    background-color: #000;
+}
+
+.tickets-list{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    list-style-type: none;
+}
+
+.tickets-list li{
+    color: #757575;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.tickets-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 2px 8px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+
+.places-list{
+    padding: 16px 0 48px 0;
+}
+
+.place-img{
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover{
+    opacity: 0.7;
+}
+
+.place-body{
+    background-color: #fff;
+    padding: 0.15px 16px;
+    font-size: 15px;
+}
+
+.place-heading{
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.place-time{
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+.place-desc{
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.contact-content{
+    padding: 32px 0;
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.icon-contact-info{
+    display: inline-block;
+    width: 30px;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.map-section img{
+    width: 100%;
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list{
+    font-size: 24px;
+}
+
+#footer .social-list a{
+    text-decoration: none;
+    color: rgba(0,0,0,.6);
+}
+
+#footer .copyright a,
+#footer .social-list a:hover{
+    color: rgba(0,0,0,.3);
+}
+
+#footer .copyright{
+    margin: 15px 0;
+    font-size: 15px;
+    color: rgb(0,0,0,.6);
+}
+
+#footer .copyright a{
+    color: rgb(0,0,0,.6);
+}
+
+.modal{
+    position:fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 100px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal-header{
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-heading-icon{
+    margin-right: 16px;
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    background: #ccc;
+    color: #000;
+}
+
+.modal-body{
+    padding: 0 16px;
+}
+
+.modal-label{
+    display: block;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.modal-input{
+    border: 1px solid #ccc;
+    display: block;
+    width: 100%;
+    padding: 8px;
+}
+
+#buy-tickets{
+    display: block;
+    width: 100%;
+    background-color: #009688;
+    color: #fff;
+    padding: 16px;
+    margin: 16px 0;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#buy-tickets:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-footer{
+    padding: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
+    PC >= 1024px
+    Tablet >= 740px & < 1024px
+    Mobile < 740px
+*/
+
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    #content .content-section{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width:739px)
+{
+    .s-mt-8{
+        margin-top: 8px !important;
+    }
+
+    #header{
+        overflow: hidden;
+    }
+
+    #header .search-btn{
+        display: none;
+    }
+
+    #header .mobile-menu-btn{
+        display: block;
+    }
+
+    #nav{
+        display: block;
+    }
+
+    #nav > li{
+        display: block;
+    }
+
+    #nav > li:first-child{
+        display: inline-block;
+    }
+
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 41px;
+    }
+
+    #nav li a{
+        padding: 1px 24px;
+    }
+
+    #content .member-img{
+        width: 60%;
+    }
+
+    #content .content-section{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .s-col-full{
+        width: 100% !important;
+    }
+
+    .contact-form{
+        margin-top: 16px;
+    }
+
+    .s-full-width{
+        width: 100% !important;
+    }
+}
+
